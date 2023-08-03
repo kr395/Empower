@@ -6,12 +6,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+    /* font-family: 'Rubik', sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     /* font-family: 'Roboto', sans-serif; */
     
 }
 body{
-    background-color: rgb(251, 249, 255);
+    background-color: rgb(40, 40, 40);
+    color: #ffffff;
 }
 /* Navigation Bar */
 nav {
@@ -21,12 +23,16 @@ nav {
 }
 #greet{
     padding-left: 10%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    /* font-family: 'Josefin Sans', sans-serif; */
 }
 /* Logo */
 #logo{
-    width: minmax(50px, 25%);
+    width: minmax(100px, 25%);
     height: 70%;
+    opacity: 160%;
+    background: transparent;
+    border-radius: 29%;
     
 }
 /* Text Area */
@@ -38,16 +44,22 @@ nav {
 /* Login Area */
 
 #loginArea{
-     width:fit-content ;
-     height: fit-content;
-     background-color: rgb(219, 231, 255);
+     width:90% ;
+     max-width: 350px;
+     min-width: 350px;
+     height: 25vh;
+     background-color: rgb(68, 75, 88);
      border-radius: 10px;
-     margin: 15px auto;
-     padding: 20px;
-    
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     flex-direction: column;
+     border: 5px double black;
+     margin: auto;
+
 }
 .input{
-    width: 90%;
+    width: 100%;
     max-width: 450px;
     min-width: 200px;
     height: 45px;
@@ -58,9 +70,8 @@ nav {
     border-radius: 10px;
     background-color: rgb(236, 242, 255);
     cursor: pointer;  
-    margin: 10px;
     font-size: larger;
-    z-index: 0;
+
     }
  
 .input::placeholder{
@@ -68,26 +79,37 @@ nav {
 } 
 
 .input:hover{
-    background-color: rgb(196, 196, 196);
+    background-color: rgb(181, 199, 255);
     transition: 0.5s;
 }
+
+#login:hover{
+    background-color: rgb(115, 255, 215);
+
+}
+
 i{
     margin: auto;
     padding: 0px 15px 0px 0px;
 }
 
-#eye{
-    display: inline;
-    align-content: end;
-    z-index: 1;
-    
+.filds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.filds{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#eyefild{
+    padding-left: 35px;
 }
+#eye{
+    padding-left: 5px;
+}
+#eye:hover {
+   color: rgb(255, 31, 206);
+   transition: 0.2s;
+}
+
 
 
 
