@@ -43,31 +43,37 @@ class userCreater{
           this.password = password
        }
        store(){
-        localStorage.setItem(userId, password)
+        localStorage.setItem(this.userId, this.password)
+        
     }
 }
+localStorage.setItem("userId", "Gopal")
+localStorage.setItem("Password", "12345")
 
-const user1 = userCreater()
-console.log(user1)
+login.addEventListener("click",()=>{
+    counter = 1
+    count = []
+    if (userId.value == "" || password.value == "") {
+        window.alert("Fill all Data") 
+       
 
+    } else {
+        // localStorage.setItem("counter", counter )
+        // const user = new userCreater("Gopal","12345")
+        // user1.store()
+        // count.push(counter)
+        // counter++    
+        let id = localStorage.getItem("userId")
+        let pas = localStorage.getItem("Password")
+        if (id == userId.value && pas == password.value ) {    
+        window.location.href = "https://www.google.com/"
+        } else {
+            window.alert("UserId or Password is wrong")
 
+        }    
+        
+        }
 
+})
 
-
-// login.addEventListener("click",()=>{
-//     users = {}
-//     if (userId.value == "" || password.value == "") {
-//         window.alert("Fill all Data") 
-
-//     } else {
-         
-//          sessionStorage.setItem("userId1", `${String(userId.value).toUpperCase()}`)
-//          sessionStorage.setItem("pass1", `${String(password.value).toUpperCase()}`)
-    
-//         }
-
-// })
-
-// console.log(sessionStorage.getItem("userId1"))
-// console.log(sessionStorage.getItem("pass1"))
 
