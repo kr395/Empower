@@ -66,7 +66,7 @@ login.addEventListener("click",()=>{
         let id = localStorage.getItem("userId")
         let pas = localStorage.getItem("Password")
         if (id == userId.value && pas == password.value ) {    
-        window.location.href = "https://www.google.com/"
+        window.location.href = "http://127.0.0.1:5500/home/home.html"
         } else {
             window.alert("UserId or Password is wrong")
 
