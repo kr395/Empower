@@ -35,9 +35,10 @@ const inputPassword = document.querySelector("#pass");
 const loginBtn = document.querySelector("#login");
 
 // const users = [
-//   { userName: "Mohit", id: "VBS3215", password: "54321", isAdmin: true },
+//   { userName: "Mohit", id: "VBS3224", password: "54321", isAdmin: true },
 //   { userName: "Aman", id: "VBS3212", password: "54321", isAdmin: false },
 //   { userName: "Gopal", id: "VBS3211", password: "54321", isAdmin: false },
+//   { userName: "Gulshan", id: "VBS3213", password: "54321", isAdmin: false },
 //   { userName: "Pranjul", id: "VBS3214", password: "54321", isAdmin: false },
 // ];
 // localStorage.setItem("users", JSON.stringify(users));
@@ -45,19 +46,20 @@ const loginBtn = document.querySelector("#login");
 loginBtn.addEventListener("click", () => {
   const inputIdValue = String(inputUserId.value).toUpperCase();
   const inputPasswordValue = String(inputPassword.value).toUpperCase();
-  users = JSON.parse(localStorage.getItem("users"));
+  const users = JSON.parse(localStorage.getItem("users"));
   const user = users.find((user) => {
     return user.id === inputIdValue;
   });
   function isValidate(id, password) {
     if (user.id === id && user.password === password) {
+      localStorage.setItem("logedUser", JSON.stringify(user))
       window.location.href = "http://127.0.0.1:5500/home/home.html";
-    } else {
-      window.alert("Invalid Login Details");
-    }
+      
+    } else {window.alert("Invalid Login Details")}
+
   }
   if (!user) {
-    window.alert("Fill all Data");
+    window.alert("Invalid Login Details");
   } else {
     isValidate(inputIdValue, inputPasswordValue);
   }
