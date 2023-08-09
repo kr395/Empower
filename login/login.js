@@ -52,15 +52,32 @@ loginBtn.addEventListener("click", () => {
   });
   function isValidate(id, password) {
     if (user.id === id && user.password === password) {
-      localStorage.setItem("logedUser", JSON.stringify(user))
+      localStorage.setItem("logedUser", JSON.stringify(user));
       window.location.href = "http://127.0.0.1:5500/home/home.html";
-      
-    } else {window.alert("Invalid Login Details")}
-
+    } else {
+      window.alert("Invalid Login Details");
+    }
   }
   if (!user) {
     window.alert("Invalid Login Details");
   } else {
     isValidate(inputIdValue, inputPasswordValue);
+  }
+});
+
+// Password Show and eye
+const eye = document.querySelector("#eye");
+let a;
+eye.addEventListener("click", () => {
+  if (a == 1) {
+    eye.className = "fa-solid fa-eye";
+    eye.style.color = "white";
+    inputPassword.type = "password";
+    a = 0;
+  } else {
+    eye.className = "fa-solid fa-eye-slash";
+    eye.style.color = "rgb(255, 114, 154)";
+    inputPassword.type = "text";
+    a = 1;
   }
 });

@@ -51,7 +51,7 @@ nav {
      background-color: rgb(68, 75, 88);
      border-radius: 10px;
      display: flex;
-     justify-content: space-evenly;
+     justify-content: space-around;
      align-items: center;
      flex-direction: column;
      border: 5px double black;
@@ -80,11 +80,12 @@ nav {
 
 .input:hover{
     background-color: rgb(181, 199, 255);
-    transition: 0.5s;
+    transition: 150ms ease-in-out;
 }
 
 #login:hover{
-    background-color: rgb(115, 255, 215);
+    background-color: rgb(84, 255, 141);
+ 
 
 }
 
@@ -96,18 +97,21 @@ i{
 .filds {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #eyefild{
-    padding-left: 35px;
+    padding-left: 40px;
+    display: flex;
+    justify-content: space-between;
 }
-#eye{
-    padding-left: 5px;
+#eye{ 
+    padding-left: 10px;
+    cursor: pointer;
 }
-#eye:hover {
-   color: rgb(255, 31, 206);
-   transition: 0.2s;
+#eye:hover  {
+   color: rgb(77, 255, 142);
+   transition: 0.4s ease-in-out;
 }
 
 
