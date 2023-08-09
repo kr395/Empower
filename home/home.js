@@ -20,5 +20,4 @@ body.onload = ()=>{
 // })
 
 // Dropdown Animation
-const icons = document.querySelectorAll("i")
-console.log(icons)
+

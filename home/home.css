@@ -22,51 +22,57 @@ body{
 /* Navigation Bar */
 nav {
     width: 100%;
-    height: 80px;
+    height: 7%;
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     background-color: rgb(237,236,237);
     gap: 10px;
 }
 
 /* Logo */
 #logo{
-    width: clamp(150px,fit-content,350px);
-    height: 90%;
-    background: transparent;
-    margin-left: 40px;
+    width: 50%;
+    height: 100%;   
+    border: solid red;
+    padding-left: 6%;
+}
+#logo > img{
+    width: 16%;
+    min-width: 100px;
 }
 
 .greet_logout{
- width: 20%;
- height: 80%;
+ width: 25%;
+ max-width: 20%;
  background-color: rgb(74,106,163);
  margin-right: clamp(10px,20px,100px);
  padding: 5px;
  display: flex;
- justify-content: space-around;
+ justify-content: space-evenly;
  align-items: center;
- font-size: clamp(1rem,2rem,1rem);
+ font-size: inherit;
  border-radius: 10px;
- box-shadow: 0px 1px 10px 2px rgb(65, 65, 65);
+ box-shadow: 0px 8px 16px 0px rgb(0, 0, 0.2);
 }
+
 
 #logout_btn{
     color: rgb(255, 255, 255) ;
-    font-size: 20px;
+    font-size: 15px;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
 }
-.dropdown{
+.titles{
     width: 100%;
     height: 35px;
+    min-width: 350px;
     background-color: rgb(74,106,163);
     margin-top: 3px;
-    box-shadow: 0px 1px 10px 2px rgb(75, 75, 75);
+    box-shadow: 0px 8px 10px 2px rgb(0.1, 0, 0);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -75,18 +81,30 @@ nav {
 
 /* Dropdown */
 .catagory{
-    width: 16.66666%;
-    height: 100%;
-    border: 2px solid red;
+    width: 14%;
+    height: 33px;
+    border: none;
     text-align: center;
-    font-size: 1em;
-    padding-top: 5px;
+    font-size: 1vw;
+    padding-top: 7px;
+    border-radius: 5px;
+    position: relative;
 }
 .catagory:hover{
-    background-color: rgb(98, 255, 0);
+    background-color: rgb(221, 255, 200);
     color: black;
-    padding-right: 10px;
-    transition: 0.5s;
+    padding-right: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.dropbox{
+    width: 16.6%;
+    
+    height: auto;
+    padding-top: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(221, 255, 200);
+    border-radius: 5px;
 }
 
 
