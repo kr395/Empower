@@ -21,3 +21,20 @@ body.onload = ()=>{
 
 // Dropdown Animation
 
+document.addEventListener('click',(e)=>{
+   const isDropdownButton = e.target.matches("[data-dropdown-btn]")
+   if (!isDropdownButton && e.target.closest('[data-dropdown]')!=null) return
+   let currnetDropdown;
+   if(isDropdownButton){
+     currnetDropdown = e.target.closest('[data-dropdown]')
+     currnetDropdown.classList.toggle('active')
+
+   }
+   document.querySelectorAll('[data-dropdown].active').forEach((dropdown)=>{
+         if(dropdown === currnetDropdown) return
+         dropdown.classList.remove('active')
+
+   })
+
+
+  })

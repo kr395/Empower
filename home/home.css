@@ -86,7 +86,7 @@ nav {
 
 /* Dropdown */
 .catagory {
-  width: 14%;
+  min-width: 14%;
   height: 33px;
   text-align: center;
   font-size: 0.9rem;
@@ -96,27 +96,31 @@ nav {
 .catagory i{
   margin-left: 5%;
 }
-.title-box{
+.title-btn{
   width: 100%;
   height: 100%;
-  padding-top: 0.5rem;
   border-radius: 10px;
+  background: none;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
 }
-.title-box:hover {
+.title-btn:hover {
   background-color: rgb(221, 255, 200);
   color: black;
   padding-right: 5px;
   transition: 0.5s ease-in-out;
 }
 
-.title-box:hover i{
+.title-btn:focus i{
   transform: rotate(90deg);
   transition: 0.5s;
-  color: green;
+  color: blue;
 }
 
 .dropdown-menu {
-  width: 100%;
+  min-width: 100%;
   position: absolute;  
   top: calc(100% + 0.2rem);
   background-color: rgb(74, 106, 163);;
@@ -130,16 +134,17 @@ nav {
   font-size: 0.8rem;
   opacity: 0;
   pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
 }
 .menu-item{
-  width: 95%;
+  min-width: 95%;
   min-height: 30px;
   text-align: center;
   color: white;
   border-radius: 5px;
   padding-top: 0.4rem;
   cursor: pointer;
-
 }
 
 .menu-item:hover{
@@ -147,7 +152,8 @@ nav {
   color: black;
   transition: 0.5s ease-in-out;
 }
-.catagory > .title-box:hover + .dropdown-menu {
+.catagory.active > .title-btn + .dropdown-menu {
   opacity: 1;
   pointer-events: all;
+  transform: translateY(0px);
 }
