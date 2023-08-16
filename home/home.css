@@ -22,10 +22,18 @@
   --elementBackground: rgb(81, 81, 81);
 }
 
+
 /* For Light theme */
 :root {
   --lightTheme: rgb(255, 255, 255);
 }
+html{
+  scrollbar-width: normal;
+  scrollbar-color: red green;
+
+}
+
+
 
 body {
   background-color: var(--darkTheme);
@@ -302,7 +310,12 @@ nav {
   margin-top: 10px;
   height: 500px;
   border-radius: 5px;
-
+  scroll-behavior: auto;
+  overflow: scroll;
+  padding: 20px;
+  text-align: center;
+  scroll-snap-align: left;
+  scrollbar-color: red;
 }
 
 
