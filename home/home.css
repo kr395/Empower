@@ -297,7 +297,11 @@ nav {
 
 
 .employeList{
-  
+  width: 99%;
+  border: var(--whiteBorder);
+  margin-top: 10px;
+  height: 500px;
+  border-radius: 5px;
 
 }
 
@@ -310,8 +314,9 @@ footer {
   background-color: var(--accentColor);
   color: white;
   text-align: center;
+  margin-top: 10px;
   padding: 10px;
-  position: absolute;
+  position: relative;
   bottom: 5px;
   font-size: 0.8rem;
   }
