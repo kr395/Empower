@@ -2,6 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=REM:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=REM:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=REM:wght@600&family=Rubik&display=swap');
+
+:root {
+    --transition: 0.3s ease-in-out;
+    --darkTheme: rgb(40, 43, 52);
+    --fontColor: rgb(255, 255, 255);
+    --hoverColor: rgb(169, 255, 222);
+    --accentColor: rgb(77, 130, 220);
+    --boxShadow: 0px 2px 5px rgb(0, 0, 0.2);
+    --whiteBorder: solid 1px white;
+    --elementBackground: rgb(81, 81, 81);
+  }
+
 *{
     padding: 0;
     margin: 0;
@@ -12,18 +24,18 @@
     
 }
 body{
-    background-color: rgb(40, 40, 40);
-    color: #ffffff;
+    background-color: var(--darkTheme);
+    color: var(--fontColor);
 }
 /* Navigation Bar */
 nav {
-    width: 100%;
+    width: 99%;
     height: 100px;
     text-align: center;
 }
 #greet{
     padding-left: 10%;
-    font-size: 25px;
+    font-size: 1.2rem;
     /* font-family: 'Josefin Sans', sans-serif; */
 }
 /* Logo */
@@ -39,30 +51,30 @@ nav {
 #genarelText{
     margin-top: 50px;
     text-align: center;
+    font-size: 0.8rem;
 }
 
 /* Login Area */
 
 #loginArea{
-     width:90% ;
      max-width: 350px;
      min-width: 350px;
-     height: 25vh;
+     min-height: 25vh;
      background-color: rgb(68, 75, 88);
-     border-radius: 10px;
+     border-radius: 5px;
      display: flex;
      justify-content: space-around;
      align-items: center;
      flex-direction: column;
-     border: 5px double black;
+     border: 3px double rgb(255, 255, 255);
      margin: auto;
-
+     box-shadow: var(--boxShadow);
 }
 .input{
     width: 100%;
     max-width: 450px;
     min-width: 200px;
-    height: 45px;
+    height: 35px;
     text-align: center;
     border: none;
     background: transparent;
@@ -71,7 +83,7 @@ nav {
     background-color: rgb(236, 242, 255);
     cursor: pointer;  
     font-size: larger;
-
+    transition: var(--transition);
     }
  
 .input::placeholder{
@@ -79,8 +91,8 @@ nav {
 } 
 
 .input:hover{
-    background-color: rgb(181, 199, 255);
-    transition: 150ms ease-in-out;
+    background-color: var(--hoverColor);
+  
 }
 
 #login:hover{
@@ -88,7 +100,6 @@ nav {
  
 
 }
-
 i{
     margin: auto;
     padding: 0px 15px 0px 0px;
@@ -108,10 +119,10 @@ i{
 #eye{ 
     padding-left: 10px;
     cursor: pointer;
+    transition: var(--transition);
 }
 #eye:hover  {
    color: rgb(77, 255, 142);
-   transition: 0.4s ease-in-out;
 }
 
 
@@ -129,6 +140,7 @@ footer {
     padding: 10px;
     position: absolute;
     bottom: 5px;
+    font-size: 0.8rem;
     }
 a{
     text-decoration: none;

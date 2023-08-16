@@ -29,30 +29,25 @@
     </nav>
     <div class="menu_container">
       <div class="catagory">
-        <button class="title-btn">Home</button>
+        <button id="homeBtn" class="title-btn"> Home</button>
       </div>
       <div class="catagory" data-dropdown>
-        <button class="title-btn" data-dropdown-btn>
+        <button id="profileBtn" class="title-btn" data-dropdown-btn>
           Profile
-          <i class="fa-solid fa-angles-right" ></i>
         </button>
-        <div class="dropdown-menu" >
-          <button class="menu-item-btn">My Profile</button>
-          <button class="menu-item-btn">Employ Details</button>
-        </div>
       </div>
       <div class="catagory" data-dropdown>
-        <button class="title-btn" data-dropdown-btn>
+        <button id="lrsBtn" class="title-btn" data-dropdown-btn>
           LRS
           <i class="fa-solid fa-angles-right"></i>
         </button>
         <div class="dropdown-menu" >
-          <button class="menu-item-btn">My Profile</button>
-          <button class="menu-item-btn">Employ Details</button>
+          <button id="leaveSumBtn"  class="menu-item-btn">Leave Summary</button>
+          <button class="menu-item-btn">Apply Leave</button>
         </div>
       </div>
       <div class="catagory">
-        <button class="title-btn">Holidays</div>
+        <button id="hollydayBtn" class="title-btn">Holidays</div>
       </button>
       <div class="catagory" data-dropdown>
         <button class="title-btn" data-dropdown-btn>
@@ -60,8 +55,10 @@
           <i class="fa-solid fa-angles-right" ></i>
         </button>
         <div class="dropdown-menu" > 
-          <button class="menu-item-btn">My Profile</button>
-        <button class="menu-item-btn">Employ Details</button></div>
+          <button class="menu-item-btn">Time Sheet Entry</button>
+        <button class="menu-item-btn">Empty Time Sheet</button>
+        <button class="menu-item-btn">View Time Sheet</button>
+      </div>
       </div>
       <div class="catagory" data-dropdown>
         <button class="title-btn" data-dropdown-btn>
@@ -69,8 +66,14 @@
           <i class="fa-solid fa-angles-right" ></i>
         </button>
         <div class="dropdown-menu" >
-          <button class="menu-item-btn">My Profile</button>
-          <button class="menu-item-btn">Employ Details</button>
+             Information Security
+          <button class="menu-item-btn">Employee Roster</button>
+          <button class="menu-item-btn">Employee Extension List</button>
+          <button class="menu-item-btn">Employee Report</button>
+          <button class="menu-item-btn">Event Feedback</button>
+          <button class="menu-item-btn">IS Test</button>
+          <button class="menu-item-btn">Event Feedback</button>
+          <button class="menu-item-btn">Terms And Condition Report</button>
         </div>
       </div>
       <div class="catagory" data-dropdown>
@@ -90,11 +93,91 @@
    <div class="add-timesheet">
       <button class="add-time-btn">Add New Time Sheet</button>  
       <i class="fa-solid fa-angles-left"></i>
-       <p>Update Your Time Sheet </p> 
+       <p id="slide_para">Update Your Time Sheet </p> 
     </div>
     <h4>Leave Summary</h4>
-   <div class="leaveSummary"></div>
+   <div class="leaveSummary">
+           <table class="table">
+            <tr>
+              <th>Type Of Leaves</th>
+              <th>Last Year</th>
+              <th>Entitlement</th>
+              <th>Taken</th>
+              <th>Applied</th>
+              <th>Balence</th>
+            </tr>
+                 <tr>
+                 <td>Earned Leave</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                </tr>
+                 <tr>
+                  <td>Casual Leave</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                </tr>
+                 <tr>
+                  <td>Restricted Leave</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                </tr>
+                 <tr>
+                  <td>Leave Without Pay</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                </tr>
+                 <tr>
+                  <td>Maternity Leave</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                </tr>
+                 <tr>
+                  <td>Compensatory Off</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                </tr>
+                 <tr id="total-row">
+                  <td>Total</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                 <td>0</td>
+                </tr>
+               
+           </table>
+
+   </div>
    <div class="employeList"></div>
   </div> 
+
+  <footer>
+    <p>Copyright © Intersoft Data Labs & Solutions Pvt.Ltd.</p>
+    <br />
+    <a href="https://empower.intsof.com/DisclaimerPolicy.htm">Disclaimer Policy</a> | <a href="">Contact</a>
+    <p>Social Media with link</p>
+    <p>Other Portals</p>
+    <br />
+    <a href="https://hrms.intsof.com/">HRMS</a> | <a href="https://intersoftdatalabs.paycalci.com/login.php">Finance</a>
+  </footer>
+
   </body>
 </html>

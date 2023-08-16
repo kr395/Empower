@@ -16,8 +16,10 @@
   --darkTheme: rgb(40, 43, 52);
   --fontColor: rgb(255, 255, 255);
   --hoverColor: rgb(169, 255, 222);
-  --accentColor: rgb(74, 106, 163);
+  --accentColor: rgb(77, 130, 220);
   --boxShadow: 0px 2px 5px rgb(0, 0, 0.2);
+  --whiteBorder: solid 1px white;
+  --elementBackground: rgb(81, 81, 81);
 }
 
 /* For Light theme */
@@ -35,7 +37,7 @@ body {
 }
 /* Navigation Bar */
 nav {
-  width: 100%;
+  width: 99.54%;
   min-height: 60px;
   display: flex;
   align-items: center;
@@ -70,6 +72,7 @@ nav {
   font-size: 1em;
   border-radius: 10px;
   box-shadow: var(--boxShadow);
+  border: var(--whiteBorder);
 }
 
 #logout_btn {
@@ -84,7 +87,7 @@ nav {
 #logout_btn:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(255, 0, 0);
-  border: 2px solid rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
 }
 
 /* Navigation Menu */
@@ -92,7 +95,7 @@ nav {
 .menu_container {
   width: 100%;
   height: 35px;
-  background-color: rgb(74, 106, 163);
+  background-color: var(--accentColor);
   margin-top: 3px;
   box-shadow: var(--boxShadow);
   display: flex;
@@ -100,7 +103,7 @@ nav {
   align-items: center;
   position: relative;
   border-radius: 3px;
-
+  border: var(--whiteBorder);
 }
 
 /* Dropdown */
@@ -117,7 +120,7 @@ nav {
 }
 .title-btn {
   width: 100%;
-  height: 100%;
+  height: 98%;
   border-radius: 10px;
   background: none;
   outline: none;
@@ -149,22 +152,22 @@ nav {
   min-width: 100%;
   position: absolute;
   top: calc(100% + 0.2rem);
-  background-color: rgb(74, 106, 163);
+  background-color: var(--darkTheme) ;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.2rem;
   padding: 5px 0px;
-  font-size: 0.8rem;
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10px);
   transition: opacity var(--transition), transform var(--transition);
+  /* border: 1px solid #00ff37; */
 }
 .menu-item-btn {
-  min-width: 95%;
+  width: 95%;
   min-height: 30px;
   text-align: center;
   color: white;
@@ -174,6 +177,9 @@ nav {
   border: none;
   background: none;
   transition: var(--transition);
+  font-size: 0.8rem;
+  padding: 0px 5px;
+  border: var(--whiteBorder);
 }
 
 .menu-item-btn:hover {
@@ -188,24 +194,27 @@ nav {
 
 /* Main Body Content */
 
+
+/* Add New Time Sheet */
 .content-container{
   margin-top: 5rem;
   width: 100%;
   
 }
 .add-timesheet{
-   width: 100%;
+   width: 99.5%;
    height: 50px;
-   background-color: rgb(81, 81, 81);
+   background-color: var(--elementBackground);
    padding-left: 5%;
    display: flex;
    justify-content: baseline;
    gap: 2rem;
    align-items: center;
    border-radius: 5px;
+   border: var(--whiteBorder);
 }
 
-.add-timesheet i, p{
+.add-timesheet  i,#slide_para{
   color: #00ff37;
   animation: right-left 1s infinite 0.5s alternate linear;
 }
@@ -235,7 +244,84 @@ nav {
   background-color: var(--hoverColor);
   color: black;
 }
+
+/* Style For Leave Summary Table */
 .content-container  h4{
    margin-top: 2rem;
    margin-left: 2rem;
+   border: var(--whiteBorder);
+   width: fit-content;
+   padding: 5px;
 }
+
+.leaveSummary{
+   width: 99%;
+   border: var(--whiteBorder);
+   height: fit-content;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 5px;
+   margin-top: 10px
+}
+
+.leaveSummary table{
+   border-radius: 10px;
+   background-color: var(--elementBackground);
+   margin: 5px;
+   padding: 5px;
+   font-size: 0.9em;
+   min-width: 400px;
+   text-align: center;
+   box-shadow: var(--boxShadow);
+   
+}
+.leaveSummary table  th{
+  background-color: var(--accentColor);
+}
+.leaveSummary table  tr,th{
+  height: 25px;
+  padding: 5px;
+}
+.leaveSummary table td,th {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.leaveSummary table tr:nth-of-type(even) {
+    background-color: rgb(68, 68, 68);
+}
+.leaveSummary table tr:nth-child(8){
+    background-color: rgb(152, 0, 0);
+}
+
+
+
+.employeList{
+  
+
+}
+
+
+/* Footer */
+
+footer {
+  width: 99%;
+  height: fit-content;
+  background-color: var(--accentColor);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 5px;
+  font-size: 0.8rem;
+  }
+
+footer a{
+  text-decoration: none;
+  color: var(--fontColor);
+  cursor: pointer;
+}
+footer a:hover{
+  color: var(--hoverColor);
+}
+

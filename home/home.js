@@ -33,3 +33,12 @@ document.addEventListener("click", (e) => {
     dropdown.classList.remove("active");
   });
 });
+
+//  Navigation menu Functions
+
+const homeBtn = document.querySelector("#homeBtn");
+const titleBtn = document.querySelector("#profileBtn");
+
+homeBtn.addEventListener("click", () => {
+  window.location.href = "http://127.0.0.1:5500/home/home.html";
+});
