@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <script
+    defer
+    src="https://kit.fontawesome.com/6cf5037fbb.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="profile.css" />
+  <script defer src="profile.js"></script>
+</head>
+<body>
+
+    <nav>
+        <!-- Logo -->
+        <div id="logo">
+          <img src="/Images/logoIntSoft.png" alt="Intersoft Logo" />
+        </div>
+        <!-- Logout -->
+        <div class="greet_logout">
+          <div class="welcome">Hello User</div>
+          <i id="logout_btn" class="fa-solid fa-right-from-bracket"></i>
+        </div>
+  
+        <!-- NavBar with Dropdown-->
+      </nav>
+      <div class="menu_container">
+        <div class="catagory">
+          <button id="homeBtn" class="title-btn"> Home</button>
+        </div>
+        <div class="catagory" data-dropdown>
+          <button id="profileBtn" class="title-btn" data-dropdown-btn>
+            Profile
+          </button>
+        </div>
+        <div class="catagory" data-dropdown>
+          <button id="lrsBtn" class="title-btn" data-dropdown-btn>
+            LRS
+            <i class="fa-solid fa-angles-right"></i>
+          </button>
+          <div class="dropdown-menu" >
+            <button id="leaveSumBtn"  class="menu-item-btn">Leave Summary</button>
+            <button class="menu-item-btn">Apply Leave</button>
+          </div>
+        </div>
+        <div class="catagory">
+          <button id="hollydayBtn" class="title-btn">Holidays</div>
+        </button>
+        <div class="catagory" data-dropdown>
+          <button class="title-btn" data-dropdown-btn>
+            TSM
+            <i class="fa-solid fa-angles-right" ></i>
+          </button>
+          <div class="dropdown-menu" > 
+            <button class="menu-item-btn">Time Sheet Entry</button>
+          <button class="menu-item-btn">Empty Time Sheet</button>
+          <button class="menu-item-btn">View Time Sheet</button>
+        </div>
+        </div>
+        <div class="catagory" data-dropdown>
+          <button class="title-btn" data-dropdown-btn>
+            EMS
+            <i class="fa-solid fa-angles-right" ></i>
+          </button>
+          <div class="dropdown-menu" >
+               Information Security
+            <button class="menu-item-btn">Employee Roster</button>
+            <button class="menu-item-btn">Employee Extension List</button>
+            <button class="menu-item-btn">Employee Report</button>
+            <button class="menu-item-btn">Event Feedback</button>
+            <button class="menu-item-btn">IS Test</button>
+            <button class="menu-item-btn">Event Feedback</button>
+            <button class="menu-item-btn">Terms And Condition Report</button>
+          </div>
+        </div>
+        <div class="catagory" data-dropdown>
+          <button class="title-btn" data-dropdown-btn>
+            ISM
+            <i class="fa-solid fa-angles-right" ></i>
+          </button>
+          <div class="dropdown-menu" > 
+          <button class="menu-item-btn">My Profile</button>
+          <button class="menu-item-btn">Employ Details</button>
+          </div>
+        </div>
+      </div>
+<!-- Profile Section -->
+      
+
+    
+</body>
+</html>
