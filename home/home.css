@@ -311,7 +311,7 @@ nav {
   height: 500px;
   border-radius: 5px;
   scroll-behavior: auto;
-  overflow: scroll;
+  /* overflow: scroll; */
   padding: 20px;
   text-align: center;
   scroll-snap-align: left;
